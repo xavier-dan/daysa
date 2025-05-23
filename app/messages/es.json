@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "tituloPrincipal": "TÍTULO PRINCIPAL DE LA EXPOSICIÓN",
+    "textoIntroductorio": "Descubre mundos antiguos y narrativas atemporales en nuestra galería.",
+    "visiteGaleria": "VISITA LA GALERÍA"
+  },
+  "Galeria": {
+    "secaoTitulo": "Exposición",
+    "tituloPrincipal": "Exposiciones Actuales en la Galería",
+    "categoriaExposicoes": "Nuestras Exposiciones"
+  },
+  "CardExposicao": {
+    "leiaMais": "LEER MÁS"
+  }
+}

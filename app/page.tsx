@@ -1,9 +1,12 @@
-import Start from "./[locale]/home/page";
+import React from 'react';
+import Header from '@/app/components/header/Header';
+import HeroImage from '@/app/components/heroImage/HeroImage';
 
-export default function Home() {
-  return (
-    <>
-    <Start></Start>
-    </>
-  );
+export default function Start() {
+    return (
+        <>
+            <Header />
+            <HeroImage></HeroImage>
+        </>
+    );
 }

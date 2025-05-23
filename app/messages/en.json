@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "tituloPrincipal": "MAIN EXHIBITION TITLE",
+    "textoIntroductorio": "Discover ancient worlds and timeless narratives in our gallery.",
+    "visiteGaleria": "VISIT THE GALLERY"
+  },
+  "Galeria": {
+    "secaoTitulo": "Exhibition",
+    "tituloPrincipal": "Current Exhibitions in the Gallery",
+    "categoriaExposicoes": "Our Exhibitions"
+  },
+  "CardExposicao": {
+    "leiaMais": "READ MORE"
+  }
+}
