@@ -46,9 +46,9 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden md:flex space-x-6">
-                    <NavLink href="/about">Sobre</NavLink>
-                    <NavLink href="/gallery">Galeria</NavLink>
-                    <NavLink href="/signUp">Cadastre-se</NavLink>
+                    <NavLink href="/about">SOBRE</NavLink>
+                    <NavLink href="/gallery">GALERIA</NavLink>
+                    <NavLink href="/login">LOGIN</NavLink>
                 </nav>
 
                 <button
@@ -62,9 +62,9 @@ export default function Header() {
 
             {menuOpen && (
                 <nav className="md:hidden px-6 pb-6 flex flex-col space-y-4 bg-[#D7C4B1] border-t border-[#8B6C3A]">
-                    <NavLink href="/about">Sobre</NavLink>
-                    <NavLink href="/gallery">Galeria</NavLink>
-                    <NavLink href="/signUp">Cadastre-se</NavLink>
+                    <NavLink href="/about">SOBRE</NavLink>
+                    <NavLink href="/gallery">GALERIA</NavLink>
+                    <NavLink href="/login">LOGIN</NavLink>
                 </nav>
             )}
         </header>
