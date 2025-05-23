@@ -20,7 +20,7 @@ export default function Header() {
         <header
             className="
             w-full
-            bg-gradient-to-r from-[#D7C4B1] via-[#8B6C3A] to-[#0C1E36]
+            bg-gradient-to-r from-[#D7C4B1] via-[#e6d6c6] to-[#f4ece5]
             shadow-md
             border-b-2 border-[#8B6C3A]
         "
