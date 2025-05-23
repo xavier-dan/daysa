@@ -1,1 +1,37 @@
-{}
+{
+    "HomePage": {
+        "tituloPrincipal": "TÍTULO PRINCIPAL DE LA EXPOSICIÓN",
+        "textoIntroductorio": "Descubra mundos antiguos y narrativas atemporales en nuestra galería.",
+        "visiteGaleria": "VISITA LA GALERÍA"
+    },
+    "Galeria": {
+        "secaoTitulo": "Exhibición",
+        "tituloPrincipal": "Exposiciones actuales en la galería",
+        "categoriaExposicoes": "Nuestras Exposiciones"
+    },
+    "CardExposicao": {
+        "leiaMais": "LEER MÁS"
+    },
+    "Menu": {
+        "sobre": "ACERCA",
+        "galeria": "GALERÍA",
+        "login": "ACCESO"
+    },
+    "Login": {
+        "entrar": "Iniciar sesión",
+        "email": "Correo electrónico",
+        "emailObrigatorio": "El correo electrónico es obligatorio",
+        "emailInvalido": "Correo electrónico no válido",
+        "senha": "Contraseña",
+        "senhaObrigatoria": "La contraseña es obligatoria",
+        "entrarBtn": "INICIAR SESIÓN",
+        "entrando": "Iniciando...",
+        "esqueci": "Olvidé mi contraseña",
+        "cadastro": "Regístrate"
+    },
+    "Footer": {
+        "galeria": "Galería Daysa",
+        "sigaNos": "Síganos",
+        "copyright": "Galería Daysa. Reservados todos los derechos"
+    }
+}

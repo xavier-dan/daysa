@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { TextField, Button, Typography, Box } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '@/app/hooks/hooks';
+import { useTranslations } from 'next-intl';
 import { login } from './loginSlice';
 
 type Inputs = {
@@ -13,6 +14,9 @@ type Inputs = {
 };
 
 export default function Login() {
+
+    const t = useTranslations('Login');
+
     const dispatch = useAppDispatch();
     const authError = useAppSelector(state => state.login.error);
     const isLoading = useAppSelector(state => state.login.isLoading);
@@ -36,11 +40,11 @@ export default function Login() {
                 className="max-w-md w-full bg-white rounded-lg shadow-lg p-8"
             >
                 <Typography variant="h4" component="h1" align="center" gutterBottom sx={{ color: '#0C1E36', fontWeight: 'bold' }}>
-                    Entrar
+                    {t('entrar')}
                 </Typography>
 
                 <TextField
-                    label="Email"
+                    label={t('email')}
                     type="email"
                     fullWidth
                     margin="normal"
@@ -48,10 +52,10 @@ export default function Login() {
                     color="primary"
                     InputLabelProps={{ style: { color: '#0C1E36' } }}
                     {...register('email', {
-                        required: 'Email é obrigatório',
+                        required: t('emailObrigatorio'),
                         pattern: {
                             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                            message: 'Email inválido',
+                            message: t('emailInvalido'),
                         },
                     })}
                     error={!!errors.email}
@@ -60,17 +64,17 @@ export default function Login() {
                 />
 
                 <TextField
-                    label="Senha"
+                    label={t('senha')}
                     type="password"
                     fullWidth
                     margin="normal"
                     variant="outlined"
                     color="primary"
                     InputLabelProps={{ style: { color: '#0C1E36' } }}
-                    {...register('password', { required: 'Senha é obrigatória' })}
+                    {...register('password', { required: t('senhaObrigatoria') })}
                     error={!!errors.password}
                     helperText={errors.password?.message}
-                    inputProps={{ 'aria-label': 'Senha' }}
+                    inputProps={{ 'aria-label': 'password' }}
                 />
 
                 {authError && (
@@ -91,15 +95,15 @@ export default function Login() {
                         fontWeight: 'bold',
                     }}
                 >
-                    {isLoading ? 'Entrando...' : 'Entrar'}
+                    {isLoading ? t('entrando') : t('entrarBtn')}
                 </Button>
 
                 <Box className="mt-6 flex justify-between text-sm text-[#0C1E36]">
                     <Link href="/forgot-password" className="hover:underline">
-                        Esqueci minha senha
+                        {t('esqueci')}
                     </Link>
                     <Link href="/signUp" className="hover:underline">
-                        Cadastre-se
+                        {t('cadastro')}
                     </Link>
                 </Box>
             </Box>
