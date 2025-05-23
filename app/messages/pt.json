@@ -11,5 +11,27 @@
     },
     "CardExposicao": {
         "leiaMais": "LEIA MAIS"
+    },
+    "Menu": {
+        "sobre": "SOBRE",
+        "galeria": "GALERIA",
+        "login": "ENTRAR"
+    },
+    "Login": {
+        "entrar": "Entrar",
+        "email": "Email",
+        "emailObrigatorio": "Email é obrigatório",
+        "emailInvalido": "Email inválido",
+        "senha": "Senha",
+        "senhaObrigatoria": "Senha é obrigatória",
+        "entrarBtn": "ENTRAR",
+        "entrando": "Entrando...",
+        "esqueci": "Esqueci minha senha",
+        "cadastro": "Cadastre-se"
+    },
+    "Footer": {
+        "galeria": "Galeria Daysa",
+        "sigaNos": "Siga-nos",
+        "copyright": "Galeria Daysa. Todos os direitos reservados."
     }
 }

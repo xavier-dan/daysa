@@ -11,5 +11,27 @@
   },
   "CardExposicao": {
     "leiaMais": "READ MORE"
+  },
+  "Menu": {
+    "sobre": "ABOUT",
+    "galeria": "GALLERY",
+    "login": "LOGIN"
+  },
+  "Login": {
+    "entrar": "Sign In",
+    "email": "Email",
+    "emailObrigatorio": "Email is mandatory",
+    "emailInvalido": "Email invalid",
+    "senha": "Password",
+    "senhaObrigatoria": "Password is mandatory",
+    "entrarBtn": "LOG IN",
+    "entrando": "Logging In...",
+    "esqueci": "Forgot my password",
+    "cadastro": "Sign Up"
+  },
+  "Footer": {
+    "galeria": "Daysa Gallery",
+    "sigaNos": "Follow Us",
+    "copyright": "Daysa Gallery. All rights reserved."
   }
 }
