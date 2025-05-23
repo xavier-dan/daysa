@@ -6,6 +6,7 @@ import Footer from '@/app/components/footer/Footer';
 export default function LoginPage() {
     return (
         <>
+        teste
             <Header />
             <Login></Login>
             <Footer></Footer>
