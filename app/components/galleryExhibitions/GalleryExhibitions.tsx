@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const exposicoesAtuais: Exposicao[] = [
   {
     id: '1',
-    imagemSrc: '/images/exposicao-egipcia.jpg',
+    imagemSrc: '/images/renascentista.jpg',
     categoria: 'Nossas Exposições', 
     titulo: 'As Exposições Cobrem Todos os Tempos da Civilização Egípcia',
     descricao: 'Uma jornada abrangente pela história e cultura do antigo Egito.',
@@ -17,7 +17,7 @@ const exposicoesAtuais: Exposicao[] = [
   },
   {
     id: '2',
-    imagemSrc: '/images/hadriano-atena.jpg',
+    imagemSrc: '/images/vangogh.jpg',
     categoria: 'Nossas Exposições',
     titulo: 'Adriano e Atena, Conversando com um Mundo Ideal',
     descricao: 'Uma exploração de diálogos filosóficos e ideais artísticos da antiguidade.',
@@ -26,7 +26,7 @@ const exposicoesAtuais: Exposicao[] = [
   },
   {
     id: '3',
-    imagemSrc: '/images/classicos-europa.jpg',
+    imagemSrc: '/images/estatua.jpg',
     categoria: 'Nossas Exposições',
     titulo: 'Clássicos da Europa. O destino comum da Grécia e Itália.',
     descricao: 'Traçando os destinos entrelaçados e legados culturais da Grécia e Itália.',
