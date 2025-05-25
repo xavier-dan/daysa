@@ -1,46 +1,36 @@
 'use client';
-
-import Image from 'next/image';
-import { Exposicao } from '@/app/types/interfaces/interfaces';
-import { useTranslations } from 'next-intl';
+import React from 'react';
+import Link from 'next/link';
+import type { Artwork } from '@/app/types/interfaces/interfaces';
 
 interface CardExposicaoProps {
-  exposicao: Exposicao;
+  artwork: Artwork;
+  iiifBase: string;
 }
 
-export default function CardExposicao({ exposicao }: CardExposicaoProps) {
+export default function CardExposicao({ artwork, iiifBase }: CardExposicaoProps) {
+  const { image_id, thumbnail, title, artist_title, date_display } = artwork;
+  const iiifUrl = image_id
+    ? `${iiifBase}/${image_id}/full/400,/0/default.jpg`
+    : '/placeholder.jpg';
 
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-      <div className="relative h-60 w-full overflow-hidden">
-        <Image
-          src={exposicao.imagemSrc}
-          alt={exposicao.titulo}
-          layout="fill"
-          objectFit="cover"
-          className="transition-opacity duration-300 hover:opacity-90"
-        />
-      </div>
-      <div className="p-6">
-        <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">
-          {exposicao.categoria === 'Nossas Exposições' ? ('categoriaExposicoes') : exposicao.categoria}
-        </p>
-        <h3 className="text-xl font-serif text-gray-50 mb-3 leading-tight">{exposicao.titulo}</h3>
-        <div className="flex items-center text-gray-400 text-sm mb-4">
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 0 00-2-2H5a2 0 00-2 2v12a2 0 002 2z" />
-          </svg>
-          <span>{exposicao.dataInicio}</span>
-          <span className="mx-2">–</span>
-          <span>{exposicao.dataFim}</span>
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-105">
+      <Link href={`/gallery/${artwork.id}`}>
+        <div className="relative h-60 w-full bg-gray-700">
+          <img
+            src={iiifUrl}
+            alt={thumbnail?.alt_text || title}
+            className="object-cover w-full h-full"
+            loading="lazy"
+          />
         </div>
-        <button className="inline-flex items-center px-4 py-2 border border-gray-600 text-sm font-medium rounded-md text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gray-500 transition-colors duration-200">
-          jaja
-          <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </button>
-      </div>
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-1 text-white">{title}</h3>
+          <p className="text-sm text-gray-300">{artist_title}</p>
+          <p className="text-sm text-gray-500 mt-2">{date_display}</p>
+        </div>
+      </Link>
     </div>
   );
 }
