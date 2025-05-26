@@ -1,8 +1,8 @@
 {
     "HomePage": {
-        "tituloPrincipal": "TÍTULO PRINCIPAL DA EXPOSIÇÃO",
-        "textoIntroductorio": "Descubra mundos antigos e narrativas atemporais em nossa galeria.",
-        "visiteGaleria": "VISITE A GALERIA"
+        "tituloPrincipal": "GALERIA DAYSA",
+        "textoIntrodutorio": "A Galeria de Arte Daysa é um espaço dedicado à celebração da criatividade e expressão artística. Aqui, você encontra obras únicas, exposições inspiradoras e um ambiente acolhedor para apreciar a arte em suas diversas formas. Descubra talentos, explore novas perspectivas e viva experiências culturais inesquecíveis.",
+        "conheca": "CONHEÇA"
     },
     "Galeria": {
         "secaoTitulo": "Exposição",
@@ -33,5 +33,11 @@
         "galeria": "Galeria Daysa",
         "sigaNos": "Siga-nos",
         "copyright": "Galeria Daysa. Todos os direitos reservados."
+    },
+    "About": {
+        "titulo": "Sobre a Galeria Daysa",
+        "descricao1": "Fundada com o propósito de celebrar a arte em todas as suas formas, a Galeria Daysa é um espaço dedicado à expressão, inspiração e criatividade.",
+        "descricao2": "Acreditamos que a arte é uma linguagem universal que conecta pessoas, culturas e histórias. Nossa curadoria valoriza artistas independentes, obras contemporâneas e projetos inovadores.",
+        "descricao3": "Seja bem-vindo para explorar nossas exposições, participar de eventos culturais e descobrir o poder transformador da arte. Nosso espaço é seu também."
     }
 }
