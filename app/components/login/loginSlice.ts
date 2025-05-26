@@ -1,19 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-
-interface User {
-    email: string;
-}
-
-interface AuthState {
-    user: User | null;
-    isLoading: boolean;
-    error: string | null;
-}
-
-interface LoginPayload {
-    email: string;
-    password: string;
-}
+import { User, AuthState, LoginPayload } from '@/app/types/interfaces/interfaces';
 
 export const login = createAsyncThunk(
     'auth/login',

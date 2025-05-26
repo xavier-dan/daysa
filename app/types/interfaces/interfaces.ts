@@ -1,10 +1,10 @@
 export interface MenuState {
-    isOpen: boolean;
+  isOpen: boolean;
 };
 
 export interface NavLinkProps {
-    href: string;
-    children: React.ReactNode;
+  href: string;
+  children: React.ReactNode;
 };
 
 export interface Exposicao {
@@ -15,4 +15,19 @@ export interface Exposicao {
   descricao: string;
   dataInicio: string;
   dataFim: string;
+}
+
+export interface User {
+  email: string;
+}
+
+export interface AuthState {
+  user: User | null;
+  isLoading: boolean;
+  error: string | null;
+}
+
+export interface LoginPayload {
+  email: string;
+  password: string;
 }
