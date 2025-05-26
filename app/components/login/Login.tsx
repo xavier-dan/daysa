@@ -32,14 +32,14 @@ export default function Login() {
     };
 
     return (
-        <main className="min-h-screen flex items-center justify-center bg-[#E8E4DC]">
+        <main className="min-h-screen flex items-center justify-center bg-[#fff]">
             <Box
                 component="form"
                 onSubmit={handleSubmit(onSubmit)}
                 noValidate
-                className="max-w-md w-full bg-white rounded-lg shadow-lg p-8"
+                className="max-w-md w-full bg-[#f6f6f6] rounded-lg shadow-lg p-8"
             >
-                <Typography variant="h4" component="h1" align="center" gutterBottom sx={{ color: '#0C1E36', fontWeight: 'bold' }}>
+                <Typography variant="h4" component="h1" align="center" gutterBottom sx={{ color: '#9E783F', fontWeight: 'bold' }}>
                     {t('entrar')}
                 </Typography>
 
@@ -50,7 +50,7 @@ export default function Login() {
                     margin="normal"
                     variant="outlined"
                     color="primary"
-                    InputLabelProps={{ style: { color: '#0C1E36' } }}
+                    InputLabelProps={{ style: { color: '#9E783F' } }}
                     {...register('email', {
                         required: t('emailObrigatorio'),
                         pattern: {
@@ -70,7 +70,7 @@ export default function Login() {
                     margin="normal"
                     variant="outlined"
                     color="primary"
-                    InputLabelProps={{ style: { color: '#0C1E36' } }}
+                    InputLabelProps={{ style: { color: '#9E783F' } }}
                     {...register('password', { required: t('senhaObrigatoria') })}
                     error={!!errors.password}
                     helperText={errors.password?.message}
@@ -90,15 +90,15 @@ export default function Login() {
                     disabled={isLoading}
                     sx={{
                         mt: 2,
-                        backgroundColor: '#0C1E36',
-                        '&:hover': { backgroundColor: '#081829' },
+                        backgroundColor: '#9E783F',
+                        '&:hover': { backgroundColor: '#e2b46e' },
                         fontWeight: 'bold',
                     }}
                 >
                     {isLoading ? t('entrando') : t('entrarBtn')}
                 </Button>
 
-                <Box className="mt-6 flex justify-between text-sm text-[#0C1E36]">
+                <Box className="mt-6 flex justify-between text-sm text-[#9E783F]">
                     <Link href="/forgot-password" className="hover:underline">
                         {t('esqueci')}
                     </Link>
