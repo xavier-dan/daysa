@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import menuReducer from "../../menu/menuSlice";
 import Header from '../Header';
+import type { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
+import * as nextRouter from 'next/navigation';
 
 jest.mock('next/navigation', () => ({
     useRouter: () => ({
@@ -55,9 +57,14 @@ describe('Header', () => {
         const store = createTestStore();
         const mockPush = jest.fn();
 
-        jest.spyOn(require('next/navigation'), 'useRouter').mockReturnValue({
+        jest.spyOn(nextRouter, 'useRouter').mockReturnValue({
             push: mockPush,
-        });
+            back: jest.fn(),
+            forward: jest.fn(),
+            refresh: jest.fn(),
+            replace: jest.fn(),
+            prefetch: jest.fn(),
+        } as AppRouterInstance);
 
         render(
             <Provider store={store}>
