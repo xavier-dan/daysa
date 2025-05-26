@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import NavLink from '../navLink/NavLink';
 import Photo from '@/public/logo.png';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { useAppSelector, useAppDispatch } from '@/app/hooks/hooks';
 import { toggleMenu } from '../menu/menuSlice';
 
@@ -18,12 +18,7 @@ export default function Header() {
 
     return (
         <header
-            className="
-            w-full
-            bg-gradient-to-r from-[#D7C4B1] via-[#e6d6c6] to-[#f4ece5]
-            shadow-md
-            border-b-2 border-[#8B6C3A]
-        "
+            className="w-full bg-[#f6f6f6] shadow-md border-b-2 border-[#9e783f]"
         >
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex justify-between items-center py-6">
                 <div
@@ -37,8 +32,8 @@ export default function Header() {
                     <Image
                         src={Photo}
                         alt="Logo Daysa"
-                        width={140}
-                        height={35}
+                        width={100}
+                        height={50}
                         quality={100}
                         priority
                         style={{ filter: 'drop-shadow(1px 1px 1px rgba(12,30,54,0.6))' }}
@@ -52,7 +47,7 @@ export default function Header() {
                 </nav>
 
                 <button
-                    className="md:hidden text-[#0C1E36]"
+                    className="md:hidden text-[#9e783f]"
                     onClick={() => dispatch(toggleMenu())}
                     aria-label="Toggle menu"
                 >
