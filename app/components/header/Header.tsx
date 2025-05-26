@@ -56,7 +56,7 @@ export default function Header() {
             </div>
 
             {menuOpen && (
-                <nav className="md:hidden px-6 pb-6 flex flex-col space-y-4 bg-[#D7C4B1] border-t border-[#8B6C3A]">
+                <nav className="md:hidden px-6 pb-6 flex flex-col space-y-4 bg-[#f6f6f6] border-t border-[#8B6C3A]">
                     <NavLink href="/about">{t('sobre')}</NavLink>
                     <NavLink href="/gallery">{t('galeria')}</NavLink>
                     <NavLink href="/login">{t('login')}</NavLink>

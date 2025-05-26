@@ -1,8 +1,8 @@
 {
   "HomePage": {
-    "tituloPrincipal": "MAIN EXHIBITION TITLE",
-    "textoIntroductorio": "Discover ancient worlds and timeless narratives in our gallery.",
-    "visiteGaleria": "VISIT THE GALLERY"
+    "tituloPrincipal": "DAYSA GALLERY",
+    "textoIntrodutorio": "Daysa Art Gallery is a space dedicated to the celebration of creativity and artistic expression. Here, you will find unique works, inspiring exhibitions and a welcoming environment to appreciate art in its many forms. Discover talents, explore new perspectives and live unforgettable cultural experiences.",
+    "conheca": "DISCOVER"
   },
   "Galeria": {
     "secaoTitulo": "Exhibition",
@@ -15,7 +15,7 @@
   "Menu": {
     "sobre": "ABOUT",
     "galeria": "GALLERY",
-    "login": "LOGIN"
+    "login": "SIGN IN"
   },
   "Login": {
     "entrar": "Sign In",
@@ -24,8 +24,8 @@
     "emailInvalido": "Email invalid",
     "senha": "Password",
     "senhaObrigatoria": "Password is mandatory",
-    "entrarBtn": "LOG IN",
-    "entrando": "Logging In...",
+    "entrarBtn": "SIGN IN",
+    "entrando": "Signing In...",
     "esqueci": "Forgot my password",
     "cadastro": "Sign Up"
   },
@@ -33,8 +33,6 @@
     "galeria": "Daysa Gallery",
     "sigaNos": "Follow Us",
     "copyright": "Daysa Gallery. All rights reserved."
-<<<<<<< Updated upstream
-=======
   },
   "About": {
     "titulo": "About Galeria Daysa",
@@ -46,6 +44,5 @@
     "title": "Daysa Art Gallery",
     "description": "Explore creativity and culture at Daysa Art Gallery. Contemporary and classic artworks in one place.",
     "keywords": "art, gallery, artwork, museum, art gallery, professional art, contemporary art, artistic, creativity, culture"
->>>>>>> Stashed changes
   }
 }

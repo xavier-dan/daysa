@@ -3,9 +3,9 @@ export interface MenuState {
 };
 
 export interface NavLinkProps {
-    href: string;
-    className?: string;
-    children: React.ReactNode;
+  href: string;
+  className?: string;
+  children: React.ReactNode;
 };
 
 export interface Exposicao {
@@ -58,12 +58,19 @@ export interface ArtworkResponse {
     current_page: number;
     next_url: string | null;
   };
-  data: Artwork[];
   config: {
     iiif_url: string;
   };
+  data: Artwork[];
 }
 
 export interface CardExposicaoProps {
   artwork: Artwork;
+}
+
+export interface Image {
+  id: string;
+  title: string;
+  alt_text?: string;
+  url: string;
 }
