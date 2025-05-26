@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import ClientLayout from './ClientLayout';
 import { NextIntlClientProvider } from 'next-intl';
+import SEOHead from './SEOHead';
 import '../globals.css'; 
 
 export default async function LocaleLayout({
@@ -19,6 +20,7 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
+            <SEOHead />
             <body>
                 <ClientLayout>
                     <NextIntlClientProvider>
