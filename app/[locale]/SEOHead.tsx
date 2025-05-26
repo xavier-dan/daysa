@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function SEOHead() {
