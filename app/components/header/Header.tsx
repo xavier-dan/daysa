@@ -14,7 +14,7 @@ export default function Header() {
     const menuOpen = useAppSelector((state) => state.menu.isOpen);
     const dispatch = useAppDispatch();
     const router = useRouter();
-    //const t = useTranslations('Header');
+    const t = useTranslations('Menu');
 
     return (
         <header
@@ -41,15 +41,9 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden md:flex space-x-6">
-                    <NavLink href="/about" className="font-bold underline">
-                        SOBRE
-                    </NavLink>
-                    <NavLink href="/gallery" className="font-bold underline ">
-                        GALERIA
-                    </NavLink>
-                    <NavLink href="/login" className="font-bold underline">
-                        LOGIN
-                    </NavLink>
+                    <NavLink href="/about">{t('sobre')}</NavLink>
+                    <NavLink href="/gallery">{t('galeria')}</NavLink>
+                    <NavLink href="/login">{t('login')}</NavLink>
                 </nav>
 
                 <button
@@ -62,10 +56,10 @@ export default function Header() {
             </div>
 
             {menuOpen && (
-                <nav className="md:hidden px-6 pb-6 flex flex-col space-y-4 bg-[#f6f6f6] shadow-md border-b-2 border-[#9e783f]">
-                    <NavLink href="/about">SOBRE</NavLink>
-                    <NavLink href="/gallery">GALERIA</NavLink>
-                    <NavLink href="/login">LOGIN</NavLink>
+                <nav className="md:hidden px-6 pb-6 flex flex-col space-y-4 bg-[#D7C4B1] border-t border-[#8B6C3A]">
+                    <NavLink href="/about">{t('sobre')}</NavLink>
+                    <NavLink href="/gallery">{t('galeria')}</NavLink>
+                    <NavLink href="/login">{t('login')}</NavLink>
                 </nav>
             )}
         </header>
