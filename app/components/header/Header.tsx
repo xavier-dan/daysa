@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import NavLink from '../navLink/NavLink';
 import Photo from '@/public/logo.png';
-// import { useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useAppSelector, useAppDispatch } from '@/app/hooks/hooks';
 import { toggleMenu } from '../menu/menuSlice';
 

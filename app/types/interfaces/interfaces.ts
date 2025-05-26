@@ -4,6 +4,7 @@ export interface MenuState {
 
 export interface NavLinkProps {
     href: string;
+    className?: string;
     children: React.ReactNode;
 };
 
