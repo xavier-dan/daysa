@@ -14,7 +14,7 @@ export default function SEOHead() {
     };
 
     return (
-        <Head>
+        <head>
             <title>{meta.title}</title>
             <meta name="description" content={meta.description} />
             <meta name="keywords" content={meta.keywords} />
@@ -34,6 +34,6 @@ export default function SEOHead() {
             <link rel="alternate" hrefLang="es" href={`${meta.url}/es`} />
             <link rel="alternate" hrefLang="en" href={`${meta.url}/en`} />
             <link rel="alternate" hrefLang="x-default" href={meta.url} />
-        </Head>
+        </head>
     );
 }
