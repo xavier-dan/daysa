@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import type { Artwork } from '@/app/types/interfaces/interfaces';
+import type { Artwork, Image } from '@/app/types/interfaces/interfaces';
 import { FaHeart, FaRegHeart, FaShareAlt } from 'react-icons/fa';
+import { useGetImageByIdQuery } from '@/app/api/artApi';
 
 interface CardExposicaoProps {
   artwork: Artwork;
@@ -13,7 +14,11 @@ export default function CardExposicao({ artwork, iiifBase }: CardExposicaoProps)
   const { image_id, thumbnail, title, artist_title, date_display } = artwork;
   const [favorited, setFavorited] = useState(false);
 
-  const iiifUrl = image_id
+  const { data: imageData } = useGetImageByIdQuery(image_id || '');
+
+  const image: Image | undefined = imageData && imageData.length > 0 ? imageData[0] : undefined;
+
+  const iiifUrl = image && image_id
     ? `${iiifBase}/${image_id}/full/400,/0/default.jpg`
     : '/placeholder.jpg';
 
@@ -44,6 +49,11 @@ export default function CardExposicao({ artwork, iiifBase }: CardExposicaoProps)
             alt={thumbnail?.alt_text || title}
             className="object-cover w-full h-full"
             loading="lazy"
+            // onError={(e) => {
+            //   const target = e.target as HTMLImageElement;
+            //   target.onerror = null; 
+            //   target.src = '/public/arte.png';
+            // }}
           />
         </div>
       </Link>
