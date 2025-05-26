@@ -1,34 +1,25 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
-import type { Artwork, Image } from '@/app/types/interfaces/interfaces';
+import Image from 'next/image';
 import { FaHeart, FaRegHeart, FaShareAlt } from 'react-icons/fa';
-import { useGetImageByIdQuery } from '@/app/api/artApi';
+import type { PexelsPhoto } from '@/app/types/interfaces/interfaces';
+import { useTranslations } from 'next-intl';
 
 interface CardExposicaoProps {
-  artwork: Artwork;
-  iiifBase: string;
+  photo: PexelsPhoto;
 }
 
-export default function CardExposicao({ artwork, iiifBase }: CardExposicaoProps) {
-  const { image_id, thumbnail, title, artist_title, date_display } = artwork;
+export default function CardExposicao({ photo }: CardExposicaoProps) {
   const [favorited, setFavorited] = useState(false);
-
-  const { data: imageData } = useGetImageByIdQuery(image_id || '');
-
-  const image: Image | undefined = imageData && imageData.length > 0 ? imageData[0] : undefined;
-
-  const iiifUrl = image && image_id
-    ? `${iiifBase}/${image_id}/full/400,/0/default.jpg`
-    : '/placeholder.jpg';
+    const t = useTranslations('Galeria');
 
   const handleShare = async () => {
-    const shareUrl = `${window.location.origin}/gallery/${artwork.id}`;
+    const shareUrl = photo.url;
     if (navigator.share) {
       try {
         await navigator.share({
-          title: title,
-          text: `Confira esta obra de ${artist_title}`,
+          title: photo.alt || t('untitled'),
+          text: `${t('share')} ${photo.photographer}`,
           url: shareUrl,
         });
       } catch (error) {
@@ -36,33 +27,27 @@ export default function CardExposicao({ artwork, iiifBase }: CardExposicaoProps)
       }
     } else {
       await navigator.clipboard.writeText(shareUrl);
-      alert('Link copiado para a área de transferência!');
+      alert(t('copied'));
     }
   };
 
   return (
     <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-105">
-      <Link href={`/gallery/${artwork.id}`}>
-        <div className="relative h-60 w-full bg-gray-700">
-          <img
-            src={iiifUrl}
-            alt={thumbnail?.alt_text || title}
-            className="object-cover w-full h-full"
-            loading="lazy"
-            // onError={(e) => {
-            //   const target = e.target as HTMLImageElement;
-            //   target.onerror = null; 
-            //   target.src = '/public/arte.png';
-            // }}
-          />
-        </div>
-      </Link>
+      <div className="relative h-60 w-full bg-gray-700">
+        <Image
+          src={photo.src.large}
+          alt={photo.alt || 'Imagem Pexels'}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          priority={false}
+        />
+      </div>
       <div className="p-4">
-        <h3 className="text-lg font-semibold mb-1 text-white">{title}</h3>
-        <p className="text-sm text-gray-300">{artist_title}</p>
-        <p className="text-sm text-gray-500 mt-2">{date_display}</p>
+        <h3 className="text-lg font-semibold mb-1 text-white">{photo.alt || t('untitled')}</h3>
+        <p className="text-sm text-gray-300">{t('by')} {photo.photographer}</p>
         <div className="flex justify-end gap-4 mt-4">
-          <button onClick={handleShare} aria-label="Compartilhar">
+          <button onClick={handleShare} aria-label={t('share')}>
             <FaShareAlt className="text-white hover:text-blue-400 w-5 h-5" />
           </button>
           <button onClick={() => setFavorited(!favorited)} aria-label="Favoritar">

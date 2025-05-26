@@ -7,7 +7,13 @@
     "Galeria": {
         "secaoTitulo": "Exhibición",
         "tituloPrincipal": "Exposiciones actuales en la galería",
-        "categoriaExposicoes": "Nuestras Exposiciones"
+        "categoriaExposicoes": "Nuestras Exposiciones",
+        "loading": "Cargando imágenes...",
+        "error": "Error al cargar imágenes.",
+        "untitled": "Sin título",
+        "by": "Por",
+        "share": "Compartir",
+        "copied": "¡Enlace copiado al portapapeles!"
     },
     "CardExposicao": {
         "leiaMais": "LEER MÁS"

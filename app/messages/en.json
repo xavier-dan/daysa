@@ -7,7 +7,13 @@
   "Galeria": {
     "secaoTitulo": "Exhibition",
     "tituloPrincipal": "Current Exhibitions in the Gallery",
-    "categoriaExposicoes": "Our Exhibitions"
+    "categoriaExposicoes": "Our Exhibitions",
+    "loading": "Loading images...",
+    "error": "Error loading images.",
+    "untitled": "Untitled",
+    "by": "By",
+    "share": "Share",
+    "copied": "Link copied to clipboard!"
   },
   "CardExposicao": {
     "leiaMais": "READ MORE"

@@ -1,12 +1,12 @@
 export interface MenuState {
   isOpen: boolean;
-};
+}
 
 export interface NavLinkProps {
   href: string;
   className?: string;
   children: React.ReactNode;
-};
+}
 
 export interface Exposicao {
   id: string;
@@ -33,44 +33,36 @@ export interface LoginPayload {
   password: string;
 }
 
-
-export interface Artwork {
+export interface PexelsPhoto {
   id: number;
-  title: string;
-  artist_title: string;
-  date_display: string;
-  medium_display: string;
-  image_id: string | null;
-  thumbnail: {
-    lqip: string;
-    width: number;
-    height: number;
-    alt_text: string;
+  width: number;
+  height: number;
+  url: string;
+  photographer: string;
+  photographer_url: string;
+  photographer_id: number;
+  avg_color: string;
+  src: {
+    original: string;
+    large2x: string;
+    large: string;
+    medium: string;
+    small: string;
+    portrait: string;
+    landscape: string;
+    tiny: string;
   };
+  alt: string;
 }
 
-export interface ArtworkResponse {
-  pagination: {
-    total: number;
-    limit: number;
-    offset: number;
-    total_pages: number;
-    current_page: number;
-    next_url: string | null;
-  };
-  config: {
-    iiif_url: string;
-  };
-  data: Artwork[];
+export interface PexelsResponse {
+  page: number;
+  per_page: number;
+  photos: PexelsPhoto[];
+  total_results: number;
+  next_page: string;
 }
 
 export interface CardExposicaoProps {
-  artwork: Artwork;
-}
-
-export interface Image {
-  id: string;
-  title: string;
-  alt_text?: string;
-  url: string;
+  photo: PexelsPhoto;
 }

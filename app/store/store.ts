@@ -1,17 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import menuReducer from '@/app/components/menu/menuSlice';
 import loginReducer from '@/app/components/login/loginSlice';
-import { artApi } from '@/app/api/artApi';
+import { pexelsApi } from '@/app/api/pexelsApi';
 
 export const store = configureStore({
   reducer: {
     menu: menuReducer,
     login: loginReducer,
-    // RTK Query API slice
-    [artApi.reducerPath]: artApi.reducer,
+    [pexelsApi.reducerPath]: pexelsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(artApi.middleware),
+    getDefaultMiddleware().concat(pexelsApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
