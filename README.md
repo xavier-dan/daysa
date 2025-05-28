@@ -7,7 +7,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Pexels API](https://img.shields.io/badge/Pexels-05A081?style=for-the-badge&logo=pexels&logoColor=white)
 
-O projeto **Daysa** é uma aplicação web desenvolvida com **React, Next.js, TypeScript e Tailwind CSS**, que consome a API pública **Pexels**. Ela permite a busca, visualização e filtragem de imagens, com uma interface responsiva e elegante.
+O projeto **Daysa** é uma aplicação web desenvolvida com **Next.js, React, React Redux, TypeScript e Tailwind CSS**, que consome a API pública **Pexels**. Ela permite a visualização de obras de arte, com uma interface responsiva e elegante.
 
 ---
 
