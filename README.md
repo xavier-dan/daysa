@@ -33,16 +33,16 @@ O projeto **Daysa** é uma aplicação web desenvolvida com **Next.js, React, Re
 * **Redux Mock Store**: Ferramenta para criar stores mockadas do Redux, facilitando o teste de componentes e lógicas que dependem do Redux.
 * **ts-node**: Permite a execução direta de arquivos TypeScript no ambiente Node.js, útil para scripts e configurações.
 
-****Este conjunto de ferramentas visa proporcionar um ambiente de desenvolvimento eficiente, com foco em performance, escalabilidade e manutenibilidade do código.
+**** Este conjunto de ferramentas visa proporcionar um ambiente de desenvolvimento eficiente, com foco em performance, escalabilidade e manutenibilidade do código.
 ---
 
 ## Principais Funcionalidades
-- Exibição de obras de arte
-- Layout responsivo para diferentes dispositivos
-- Feedback visual de carregamento
-- Componentes reutilizáveis organizados
-- Cadastro de usuário por meio de formulário
-- Possibilidade de favoritar e compartilhar
+* Exibição de obras de arte
+* Layout responsivo para diferentes dispositivos
+* Feedback visual de carregamento
+* Componentes reutilizáveis organizados
+* Cadastro de usuário por meio de formulário
+* Possibilidade de favoritar e compartilhar
 
 ## Instalação e Execução
 
