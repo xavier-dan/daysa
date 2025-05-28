@@ -72,6 +72,6 @@ yarn dev
 
 Desenvolvido por [Daniel Lacerda](https://www.linkedin.com/in/daniellacerda/) e [Yasmin da Silva Muniz](https://www.linkedin.com/in/yasmiinmuniz/)
 
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
