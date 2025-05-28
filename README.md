@@ -18,7 +18,7 @@ O projeto **Daysa** é uma aplicação web desenvolvida com **Next.js, React, Re
 * **Tailwind CSS** – Estilização moderna com classes utilitárias.
 * **Pexels API** – Fonte de dados para filmes.
 * **Roles App Architecture** – Estrutura de pastas baseada em responsabilidades (components, contexts, pages, hooks, etc).
-* * **React Redux**: Facilita a conexão dos componentes com o store Redux.
+* **React Redux**: Facilita a conexão dos componentes com o store Redux.
 * **React Hook Form**: Biblioteca performática e flexível para gerenciamento de formulários no React.
 * **Next-intl**: Internacionalização de aplicações Next.js.
 * **React-icons**: Coleção de ícones.
